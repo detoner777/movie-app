@@ -7,7 +7,7 @@ const useAxiosHook = myUrl => {
   const [data, setData] = useState([]);
   const [url, setUrl] = useState(myUrl);
   const [isLoading, setIsLoading] = useState(false);
-  const [isErrorm, setIsError] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
