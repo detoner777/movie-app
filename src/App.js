@@ -4,15 +4,18 @@ import UpcomingMovies from "./pages/UpcomingMovies";
 import PopularMovies from "./pages/PopularMovies";
 import FavoritesMovies from "./pages/FavoritesMovies";
 import FullMovie from "./pages/FullMovie";
+import Store from "./Store";
 
 function App() {
   return (
-    <Router>
-      <Route path="/" exact component={PopularMovies} />
-      <Route path="/upcoming" component={UpcomingMovies} />
-      <Route path="/favorites" component={FavoritesMovies} />
-      <Route path="/fullmovie" component={FullMovie} />
-    </Router>
+    <Store>
+      <Router>
+        <Route path="/" exact component={PopularMovies} />
+        <Route path="/upcoming" component={UpcomingMovies} />
+        <Route path="/favorites" component={FavoritesMovies} />
+        <Route path="/fullmovie" component={FullMovie} />
+      </Router>
+    </Store>
   );
 }
 

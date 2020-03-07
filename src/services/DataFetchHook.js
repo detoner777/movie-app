@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_KEY = process.env.TMDB_API_KEY;
+const API_KEY = process.env.APP_TMDB_API_KEY;
 
 const useAxiosHook = myUrl => {
   const [data, setData] = useState([]);
@@ -23,6 +23,7 @@ const useAxiosHook = myUrl => {
               `https://api.themoviedb.org/3/movie/${movie.id}?api_key=${API_KEY}&&language=en-US&append_to_response=videos,images&include_image_language=en,null`
             );
             movie.details = responseDetails.data;
+            console.log(movie.details);
           })
         );
 

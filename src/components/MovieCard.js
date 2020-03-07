@@ -4,7 +4,7 @@ import styled from "styled-components";
 // import { useMediaQuery } from "react-responsive";
 import { navigate } from "@reach/router";
 
-import { CTX } from "../components/Store";
+import { CTX } from "../Store";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStopwatch } from "@fortawesome/free-solid-svg-icons";
